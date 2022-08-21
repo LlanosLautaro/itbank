@@ -1,0 +1,23 @@
+{% extends 'layout/layout.html' %}
+
+{% block title %}
+prestamos pre-aprobados
+{% endblock title %}
+
+
+{%block header%}
+<h4>Solicitud de prestamos pre-aprobados</h4>
+{% endblock %}
+
+{%block content%}
+<form method = 'POST' class='form-control '>
+
+{% csrf_token %}
+    {{form.as_p}}
+
+    <button type='submit' class='btn btn-primary' style ='background-color:#2f86b8'>Solicitar</button>
+
+</form>
+{% endblock %}
+
+

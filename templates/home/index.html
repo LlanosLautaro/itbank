@@ -1,0 +1,115 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/h-style.css' %}" />
+    <title>ITBANK</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="logo">
+        <div class = 'itba-logo'></div>
+      </div>
+      
+      <div class="nav-items">
+        <a href="#">Services</a>
+        <a href="#">Insights</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Of interest</a>
+      </div>
+      <div class="btns">
+        <a href='{% url 'login' %}' ><button class='signup'type ='submit'>Sign up</button><a/>
+        <a href='{% url 'login' %}' ><button class="login" type ='submit'>Log in</button><a/>
+      </div>
+
+    </nav>
+    <header class="hero-section">
+      <div class="hero-text-container">
+        <h1
+          >Make it<br />
+          Simple.</h1
+        >
+        <p
+          >Take your financial life online. Your easy bank account<br />
+          will be a one-stop-shop for spending,saving,<br />budgeting,investing,
+          and much more.</p
+        >
+        <button>Get it now</button>
+      </div>
+      <div class="hero-img-container">
+        <div class="containercard">
+          <div class="card">
+            <div class="visa">
+            </div>
+            <div class="chip"></div>
+            <div class="card-number"></div>
+            <div class="meta">
+                <div class="name">
+                  <div class="itba-img"></div>
+                </div>
+                <div class="exp-date"></div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="why-us-section">
+      <section class="why-us">
+        <div>
+          <h1>Why choose ITBANK?</h1>
+          <p
+            >We leverage open banking to turn your bank accountinto your
+            financial hub.Control your finances like never before.</p
+          >
+        </div>
+
+      </section>
+      <div class="personaje">
+        <div id="character1"></div>
+      </div>
+      
+      
+    </div>  
+    <div class="why-us-section">
+      <section class="why-us">
+        <div>
+          <h1>Using Blink take it easy <br> Just  relax</h1>
+          <p
+            >LOREM LOREM LOREM LOREM LOREM LOREM.<br />LOREM LOREM LOREM.</p
+          >
+        </div>
+
+      </section>
+      <div id="character2"></div>
+      
+    </div>  
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="social-container">
+          <img src="./images/icon-facebook.svg" alt="" />
+          <img src="./images/icon-instagram.svg" alt="" />
+          <img src="./images/icon-twitter.svg" alt="" />
+          <img src="./images/icon-pinterest.svg" alt="" />
+        </div>
+        <div class="menu">
+          <a href="#">About us</a>
+          <a href="#">Contact us</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="menu">
+          <a href="#">Carriers</a>
+          <a href="#">Support</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <button >Request Invite</button>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
