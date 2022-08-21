@@ -5,7 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import CustomUserCreationForm  
 # Create your views here.  
   
-def register(request):  
+def registro(request):  
     if request.POST == 'POST':  
         form = CustomUserCreationForm()  
         if form.is_valid():  
@@ -15,4 +15,4 @@ def register(request):
     context = {  
         'form':form  
     }  
-    return render(request, 'registro.html', context)  
+    return render(request, 'registro/registro.html', context)  

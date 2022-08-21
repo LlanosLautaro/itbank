@@ -7,7 +7,7 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/style.css'%} " />
+    <link rel="stylesheet" href="../../static/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,15 +38,7 @@
       <div>
         <div class="profile">
            
-          {% if user.is_authenticated %}
-
-           hola {{user.username}} &nbsp &nbsp <a href="{% url 'cerrar_sesion' %}">cerrar sesion</a>
-
-          {% else %}
-
-          <a href="{% url 'iniciar_sesion' %}">login</a> &nbsp &nbsp <a href= "{% url 'login' %}"> Registrate </a>
-
-          {% endif %}
+     
 
         </div>
       </div>

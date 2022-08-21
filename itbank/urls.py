@@ -22,6 +22,6 @@ path('cliente/', include ('apps.cliente.urls'), name='cliente'),
 path('cuenta/', include ('apps.cuenta.urls'), name='cuenta'),
 path('tarjeta/', include ('apps.tarjeta.urls'), name='tarjeta'),
 path('prestamo/', include ('apps.prestamo.urls'), name='prestamo'),
-path('login/', include ('apps.registro.urls'), name='login'),
+path('registro/', include ('apps.registro.urls'), name='registro'),
 path('', include ('apps.home.urls'), name='home'),
 ]
