@@ -4,10 +4,23 @@ Prestamos
 {% endblock %}
 
 {%block header%}
-<h1>Este es el nuevo header de Prestamos</h1>
+<h3>Bienvenido a Solicitud de prestamos </h3>
 {% endblock %}
 
 {%block content%}
-<a href='{% url 'solicitarPrestamo' %}' class='link-primary'>Solicitar un prestamo</a>
-<h1>Este es el nuevo contenido de Prestamos</h1>
+<div >
+    <div class="content">
+        <p>Clickeando en el siguiente link: <a href='{% url 'solicitarPrestamo' %}' class='link-primary'>Solicitar un prestamo</a> podras acceder al apartado donde podrás seleccionar:</p>
+    <ol>
+        <li>Tipo de prestamo</li>
+        <li>Fecha de Inicio del prestamo</li>
+        <li>Monto del prestamo</li>
+    </ol> 
+    
+    <p>cada una de estas opciones estarán limitadas a tu tipo de plan.</p>
+    <p>para solicitar más información sobre tipos de plan haz click <a href="#">aquí</a><p>
+        <div>
+</div>
+
+
 {% endblock %}
