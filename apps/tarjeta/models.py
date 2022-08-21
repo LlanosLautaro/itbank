@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class MarcaTarjeta(models.Model):
-    brand_id = models.AutoField()
+    brand_id = models.AutoField(primary_key=True)
     brand_name = models.TextField()
 
     class Meta:
@@ -11,7 +11,7 @@ class MarcaTarjeta(models.Model):
         db_table = 'marca_tarjeta'
 
 class Tarjeta(models.Model):
-    card_id = models.AutoField()
+    card_id = models.AutoField(primary_key=True)
     number_card = models.CharField(unique=True, max_length=200)
     cvv = models.IntegerField()
     issue_date = models.TextField()
@@ -25,7 +25,7 @@ class Tarjeta(models.Model):
         db_table = 'tarjeta'
 
 class TipoCliente(models.Model):
-    customer_type_id = models.AutoField()
+    customer_type_id = models.AutoField(primary_key=True)
     type_name = models.TextField(unique=True)
     debit_card = models.TextField()
     credit_card = models.TextField()

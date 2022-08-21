@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Cuenta(models.Model):
-    account_id = models.AutoField()
+    account_id = models.AutoField(primary_key=True)
     balance = models.IntegerField()
     iban = models.TextField()
     account_type = models.TextField(blank=True, null=True)

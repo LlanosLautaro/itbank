@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'apps.prestamo',
     'apps.registro',
     'apps.home', 
-    'crispy_forms', ]
+     ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
