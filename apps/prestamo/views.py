@@ -9,7 +9,7 @@ from .forms import PrestamoForm
 
 
 # Create your views here.
-
+@login_required
 
 def index_prestamos(request):
     return render(request, 'prestamos/index.html')
@@ -18,7 +18,7 @@ def index_prestamos(request):
 def solicitarPrestamo(request):
 
     usuario = Cliente.objects.get(customer_name = User.get_username(request.user))
-    tipo_cliente = usuario.tipo_cliente
+    tipo_cliente = usuario.customer_type_id
     customerID = usuario.customer_id
     form = PrestamoForm()
 
@@ -26,11 +26,11 @@ def solicitarPrestamo(request):
     cuenta = filtro_cuenta.filter(account_id=filtro_cuenta[0].account_id)
 
     match tipo_cliente:
-        case 'Black':
+        case 3:
             prestamo_max = 500000
-        case 'Gold':
+        case 2:
             prestamo_max = 300000
-        case 'Classic':
+        case 1:
             prestamo_max = 100000
 
     if request.method == 'POST':
