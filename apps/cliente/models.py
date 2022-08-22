@@ -13,11 +13,13 @@ class TipoCliente(models.Model):
     withdraw_daily_max = models.IntegerField(blank=True, null=True)
     transfer_comission = models.IntegerField(blank=True, null=True)
     max_travel_reception = models.IntegerField(blank=True, null=True)
-
+    
+    def __str__(self):
+        return self.type_name
     class Meta:
         managed = False
         db_table = 'tipo_cliente'
-
+    
 class Cliente(models.Model):
     customer_id = models.AutoField(primary_key=True)
     customer_name = models.CharField(max_length=55)
@@ -29,7 +31,9 @@ class Cliente(models.Model):
     branch_id = models.IntegerField(blank=True, null=True)
     email = models.CharField(max_length=254, blank=True, null=True)
     telefono = models.IntegerField(blank=True, null=True)
-
+    
+    def __str__(self):
+        return self.customer_name +' ' +self.customer_surname
     class Meta:
         managed = False
         db_table = 'cliente'

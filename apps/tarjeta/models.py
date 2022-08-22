@@ -19,7 +19,8 @@ class Tarjeta(models.Model):
     type_card = models.CharField(max_length=55)
     customer_id = models.IntegerField()
     brand = models.ForeignKey(MarcaTarjeta, models.DO_NOTHING)
-
+    def __str__(self):
+        return self.customer_id + '-' + self.card_id+ '-' + self.type_card
     class Meta:
         managed = False
         db_table = 'tarjeta'
@@ -37,6 +38,8 @@ class TipoCliente(models.Model):
     transfer_comission = models.IntegerField(blank=True, null=True)
     max_travel_reception = models.IntegerField(blank=True, null=True)
 
+    def __str__(self):
+        return self.type_name
     class Meta:
         managed = False
         db_table = 'tipo_cliente'
