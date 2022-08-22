@@ -141,7 +141,7 @@ main .insights svg{
 main .insights svg circle{
     fill: none;
     stroke:#2F86B8;
-    stroke-width: 17;
+    stroke-width: 16;
     stroke-linecap: round;
     transform: translate(8px,8px);
 
@@ -166,13 +166,17 @@ main .insights .dinero-invertido svg circle{
 
 main .insights .progress .number{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 8px;
+    left: 2px;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items:center ;
+    
+}
+.number p{
+    font-size: 12px;
 }
 
 main .insights small{
