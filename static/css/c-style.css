@@ -291,3 +291,10 @@ box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;    border-radius: 1.2rem 
     display: flex;
 }
 
+.floated{
+float: right;
+}
+
+button:hover{
+    background-color: #2F86B8;
+}
