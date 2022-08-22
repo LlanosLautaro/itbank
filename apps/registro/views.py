@@ -23,7 +23,7 @@ class registro(View):
         
 def cerrar_sesion(request):
     logout(request)
-    return redirect('index_clientes') #aca tiene que redireccionar al home
+    return redirect('home') #aca tiene que redireccionar al home
 
 def iniciar_sesion(request):
     if request.method == "POST":
