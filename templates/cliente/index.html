@@ -3,7 +3,7 @@ rel="stylesheet" href= {% static 'css/c-style.css'%} /> {%endblock extrahead%}
 {% block header%} {% endblock header %} {% block content%}
 <div class="containera">
   <main>
-    <h1>Bienvenido de nuevo {{nombre_usuario}}</h1>
+    <h1>Bienvenido de nuevo {{user.username}}</h1>
     <div class="date">
       <input type="date" />
     </div>
@@ -154,35 +154,35 @@ rel="stylesheet" href= {% static 'css/c-style.css'%} /> {%endblock extrahead%}
         <div class='recent-updates'>
             <div class='update'>
                 <div class='message'>
-                    <p><b>Usuario</b>
+                    <p><b>{{user.username}}</b>
                         Transfirió $10000
                     </p>
                     <small class='text-muted'> hace 10 min</small>
             </div>
             <div class='update'>
                 <div class='message'>
-                    <p><b>Usuario</b>
+                    <p><b>{{user.username}}</b>
                         Gastó $3000 en Algo
                     </p>
                     <small class='text-muted'> hace 10 min</small>
             </div>
             <div class='update'>
                 <div class='message'>
-                    <p><b>Usuario</b>
+                    <p><b>{{user.username}}</b>
                         Recibió $1000 de Inversiones
                     </p>
                     <small class='text-muted'> hace 10 min</small>
             </div>
             <div class='update'>
                 <div class='message'>
-                    <p><b>Usuario</b>
+                    <p><b>{{user.username}}</b>
                         Recibió $30000
                     </p>
                     <small class='text-muted'> hace 10 min</small>
             </div>
             <div class='update'>
                 <div class='message'>
-                    <p><b>Usuario</b>
+                    <p><b>{{user.username}}</b>
                         Invirtió $1000
                     </p>
                     <small class='text-muted'> hace 1 hora</small>
