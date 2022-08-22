@@ -4,7 +4,7 @@ from django.db import models
 class Cuenta(models.Model):
     account_id = models.AutoField(primary_key=True)
     balance = models.IntegerField()
-    iban = models.TextField()
+    iban = models.CharField(max_length=55)
     account_type = models.TextField(blank=True, null=True)
     customer_id = models.IntegerField(blank=True, null=True)
 

@@ -4,7 +4,7 @@ from django.db import models
 
 class MarcaTarjeta(models.Model):
     brand_id = models.AutoField(primary_key=True)
-    brand_name = models.TextField()
+    brand_name = models.CharField(max_length=55)
 
     class Meta:
         managed = False
@@ -14,9 +14,9 @@ class Tarjeta(models.Model):
     card_id = models.AutoField(primary_key=True)
     number_card = models.CharField(unique=True, max_length=200)
     cvv = models.IntegerField()
-    issue_date = models.TextField()
-    exp_date = models.TextField()
-    type_card = models.TextField()
+    issue_date = models.DateField()
+    exp_date = models.DateField()
+    type_card = models.CharField(max_length=55)
     customer_id = models.IntegerField()
     brand = models.ForeignKey(MarcaTarjeta, models.DO_NOTHING)
 
@@ -27,9 +27,9 @@ class Tarjeta(models.Model):
 class TipoCliente(models.Model):
     customer_type_id = models.AutoField(primary_key=True)
     type_name = models.TextField(unique=True)
-    debit_card = models.TextField()
-    credit_card = models.TextField()
-    current_account = models.TextField()
+    debit_card = models.CharField(max_length=55)
+    credit_card =models.CharField(max_length=55)
+    current_account = models.CharField(max_length=55)
     checkbook_amount = models.IntegerField()
     box_dollar = models.TextField(blank=True, null=True)
     box_peso = models.TextField(blank=True, null=True)
