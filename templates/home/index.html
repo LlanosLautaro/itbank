@@ -16,17 +16,21 @@
       </div>
       
       <div class="nav-items">
-        <a href="#">Services</a>
-        <a href="#">Insights</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Of interest</a>
+        <a href="#">Servicios</a>
+        <a href="#">Nuestra visión</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Contacto</a>
+        <a href="#">De interes</a>
       </div>
       <div class="btns">
-        <a href= "{% url 'registro' %}" > <button class='signup'type ='submit'>Sign up</button><a/>
-        <a href= "{% url 'iniciar_sesion' %}" > <button class="login" type ='submit'>Log in</button><a/>
+        <form action='{% url 'registro' %}'>
+          <button class='singup'type="submit">registro</button>
+       </form>
+       <form action="{% url 'iniciar_sesion' %}">
+        <button class='login' type="submit">Ingresar</button>
+     </form>
       </div>
-
+<!-- "{% url 'registro' %}"  "{% url 'iniciar_sesion' %}"  -->
     </nav>
     <header class="hero-section">
       <div class="hero-text-container">
