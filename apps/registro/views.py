@@ -12,7 +12,5 @@ def registro(request):
             form.save()  
     else:  
         form = CustomUserCreationForm()  
-    context = {  
-        'form':form  
-    }  
+        context = {'form':form}  
     return render(request, 'registro/registro.html', context)  

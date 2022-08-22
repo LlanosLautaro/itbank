@@ -4,25 +4,25 @@ from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError  
 from django.forms.fields import EmailField  
 from django.forms.forms import Form  
-
+  
 class CustomUserCreationForm(UserCreationForm):  
-    username = forms.CharField(label='username', min_length=5, max_length=150)  
-    email = forms.EmailField(label='email')  
-    password1 = forms.CharField(label='password', widget=forms.PasswordInput)  
-    password2 = forms.CharField(label='Confirm password', widget=forms.PasswordInput)  
+    username = forms.CharField(label='Nombre de Usuario', min_length=5, max_length=150)  
+    email = forms.EmailField(label='Email')  
+    password1 = forms.CharField(label='Contraseña', widget=forms.PasswordInput)  
+    password2 = forms.CharField(label='Confirmar Contraseña', widget=forms.PasswordInput)  
   
     def username_clean(self):  
         username = self.cleaned_data['username'].lower()  
         new = User.objects.filter(username = username)  
         if new.count():  
-            raise ValidationError("User Already Exist")  
+            raise ValidationError("Este usuario ya existe")  
         return username  
   
     def email_clean(self):  
         email = self.cleaned_data['email'].lower()  
         new = User.objects.filter(email=email)  
         if new.count():  
-            raise ValidationError(" Email Already Exist")  
+            raise ValidationError("Este correo ya esta registrado")  
         return email  
   
     def clean_password2(self):  

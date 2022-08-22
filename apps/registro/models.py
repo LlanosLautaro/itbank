@@ -1,22 +1,37 @@
-from django.db import models
-# Create your models here.
-
-class LoginUsuario(models.Model):
-    password = models.CharField(max_length=128)
-    last_login = models.DateTimeField(blank=True, null=True)
-    is_superuser = models.BooleanField()
-    username = models.CharField(unique=True, max_length=150)
-    first_name = models.CharField(max_length=150)
-    last_name = models.CharField(max_length=150)
-    email = models.CharField(max_length=254)
-    is_staff = models.BooleanField()
-    is_active = models.BooleanField()
-    date_joined = models.DateTimeField()
-    clave = models.CharField(max_length=4)
-    telefono = models.IntegerField(blank=True, null=True)
-    customer_id = models.IntegerField(unique=True, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'Login_usuario'
-    
+from django.db import models  
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin  
+from django.utils import timezone  
+from django.utils.translation import gettext_lazy as _  
+from .managers import CustomUserManager  
+# Create your models here.  
+  
+class CustomUser(AbstractBaseUser, PermissionsMixin):  
+    username = None  
+    email = models.EmailField(_('email_address'), unique=True, max_length = 200)  
+    date_joined = models.DateTimeField(default=timezone.now)  
+    is_staff = models.BooleanField(default=False)  
+    is_active = models.BooleanField(default=True)  
+      
+  
+  
+    USERNAME_FIELD = 'email'  
+    REQUIRED_FIELDS = []  
+  
+    objects = CustomUserManager()  
+      
+    def has_perm(self, perm, obj=None):  
+        "Does the user have a specific permission?"  
+        # Simplest possible answer: Yes, always  
+        return True  
+  
+    def is_staff(self):  
+        "Is the user a member of staff?"  
+        return self.staff  
+  
+    @property  
+    def is_admin(self):  
+        "Is the user a admin member?"  
+        return self.admin  
+  
+    def __str__(self):  
+        return self.email  
