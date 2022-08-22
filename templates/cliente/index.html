@@ -1,12 +1,202 @@
-{% extends 'layout/layout.html' %}
-{%block title%}
-Cliente
-{% endblock %}
+{% extends 'layout/layout.html' %} {% load static %} {%block extrahead%} <link
+rel="stylesheet" href= {% static 'css/c-style.css'%} /> {%endblock extrahead%}
+{% block header%} {% endblock header %} {% block content%}
+<div class="containera">
+  <main>
+    <h1>Bienvenido de nuevo {{nombre_usuario}}</h1>
+    <div class="date">
+      <input type="date" />
+    </div>
 
-{%block header%}
-<h1>Este es el nuevo header de cliente</h1>
-{% endblock %}
+    <div class="insights">
+      <div class="balance-total">
+        <span class="material-symbols-outlined"> account_balance_wallet </span>
 
-{%block content%}
-<h1>Este es el nuevo contenido de cliente</h1>
-{% endblock %}
+        <div class="middle">
+          <div class="left">
+            <h3>Tu balance total</h3>
+            <h1>20000</h1>
+          </div>
+
+          <div class="progress">
+            <svg>
+              <circle cx="38" cy="38" r="36"></circle>
+            </svg>
+            <div class="number">
+              <p>100%</p>
+            </div>
+          </div>
+        </div>
+        <small class="text-muted">Last 24 hours</small>
+      </div>
+      <!--_____________balance end_____________-->
+      <div class="gastos-expenses">
+        <span class="material-symbols-outlined"> money_off </span>
+
+        <div class="middle">
+          <div class="left">
+            <h3>Dinero gastado</h3>
+            <h1>20000</h1>
+          </div>
+
+          <div class="progress">
+            <svg>
+              <circle cx="38" cy="38" r="36"></circle>
+            </svg>
+            <div class="number">
+              <p>30%</p>
+            </div>
+          </div>
+        </div>
+        <small class="text-muted">Last 24 hours</small>
+      </div>
+      <!--_____________ end_____________-->
+      <div class="dinero-invertido">
+        <span class="material-symbols-outlined"> bar_chart </span>
+
+        <div class="middle">
+          <div class="left">
+            <h3>Dinero invertido</h3>
+            <h1>20000</h1>
+          </div>
+
+          <div class="progress">
+            <svg>
+              <circle cx="38" cy="38" r="36"></circle>
+            </svg>
+            <div class="number">
+              <p>80%</p>
+            </div>
+          </div>
+        </div>
+        <small class="text-muted">Last 24 hours</small>
+      </div>
+    </div>
+
+<!--Finalizan graficos-->
+
+<!--Comienzo Movimientos-->
+
+<div class='ultimos-movimientos'>
+    <h2>Ultimos movimientos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Tipo de Movimiento</th>
+                <th>Monto</th>                
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Detalles</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Detalles</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Detalles</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Detalles</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Detalles</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Detalles</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Detalles</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <!--fin Movimientos-->
+
+    <a href='#'>Ver todos</a>
+</div>
+
+  </main>
+    <!--fin main-->
+
+
+    <div class='right'>
+        <div class='recent-updates'>
+            <div class='update'>
+                <div class='message'>
+                    <p><b>Usuario</b>
+                        Transfirió $10000
+                    </p>
+                    <small class='text-muted'> hace 10 min</small>
+            </div>
+            <div class='update'>
+                <div class='message'>
+                    <p><b>Usuario</b>
+                        Gastó $3000 en Algo
+                    </p>
+                    <small class='text-muted'> hace 10 min</small>
+            </div>
+            <div class='update'>
+                <div class='message'>
+                    <p><b>Usuario</b>
+                        Recibió $1000 de Inversiones
+                    </p>
+                    <small class='text-muted'> hace 10 min</small>
+            </div>
+            <div class='update'>
+                <div class='message'>
+                    <p><b>Usuario</b>
+                        Recibió $30000
+                    </p>
+                    <small class='text-muted'> hace 10 min</small>
+            </div>
+            <div class='update'>
+                <div class='message'>
+                    <p><b>Usuario</b>
+                        Invirtió $1000
+                    </p>
+                    <small class='text-muted'> hace 1 hora</small>
+            </div>
+        </div>
+    <!-- analytics-->
+
+
+    </div>
+
+
+
+
+
+
+</div>
+{% endblock content %} {% block footer%} {% endblock footer %}

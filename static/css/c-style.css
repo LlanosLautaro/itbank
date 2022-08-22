@@ -1,0 +1,293 @@
+  /* _____#2F86B8;__________SECCION CLIENTE________________*/
+
+  *{
+    margin: 0;
+    padding: 0;
+    outline:0;
+    appearance: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+h1{font-weight: 800;
+font-size: 1.8rem;
+}
+
+h2{
+    font-size: 1.4rem;
+}
+
+h3{
+    font-size: 0.87rem;
+
+}
+h4{
+    font-size: 0.8rem;
+}
+
+h5{
+    font-size: 0.77rem;
+}
+small{
+    font-size: 0.75rem;
+
+}
+
+.text-muted{
+    color: #b2b9bd;
+}
+
+.success{
+    color: #11b849;
+}
+.danger{
+    color: #b83211;
+}
+  main{
+    margin-top:1.4rem ;
+  }
+
+  .containera{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1.8rem;
+
+  }
+main .date{
+    display:inline-block;
+    background-color: #e0e4e6;
+    border-radius: 0.4rem;
+    margin-top:1rem;
+    padding: 0.8rem 1,6rem;
+
+}
+
+main .date input[type='date']{
+    background: transparent;
+    color:#535758;
+
+}
+
+main .insights{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.6rem;
+
+}
+main .insights> div{
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    transition: all 300ms ease;
+
+}
+
+main .insights> div:hover{
+    box-shadow: none;
+
+}
+main .insights>div span{
+    background-color: #2F86B8;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 2rem;
+}
+main .insights > div.gastos-expenses span{
+    background-color: #b83211;
+}
+
+main .insights > div.dinero-invertido span{
+    background-color: #11b849;
+}
+main .insights > div .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3{
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+}
+
+main .insights .progress{
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+}
+
+main .insights svg{
+
+    width: 7rem;
+    height: 7rem;
+
+}
+
+main .insights svg circle{
+    fill: none;
+    stroke:#2F86B8;
+    stroke-width: 17;
+    stroke-linecap: round;
+    transform: translate(8px,8px);
+
+}
+
+main .insights .balance-total svg circle{
+    stroke-dashoffset: -10;
+    stroke-dasharray: 200;
+}
+
+main .insights .gastos-expenses svg circle{
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 300;
+    stroke:#b83211;
+}
+
+main .insights .dinero-invertido svg circle{
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+    stroke:#11b849;
+}
+
+main .insights .progress .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+
+main .insights small{
+    margin-top: 1.6;
+    display: block;
+}
+
+
+main .ultimos-movimientos{
+    margin-top: 2rem;
+}
+main .ultimos-movimientos h2{
+    margin-bottom: 0.8rem;
+
+}
+
+main .ultimos-movimientos table{
+    background-color: #ffffff;
+    width: 100%;
+    border-radius:2rem ;
+    padding:1.8rem;
+    text-align: center;
+box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;    transition: all 200ms ease;
+}
+
+main .ultimos-movimientos table:hover{
+    box-shadow: none;
+
+}
+main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid rgba(17, 12, 46, 0.15);
+    color: #000000;
+
+}
+
+main table tbody tr:last-child{
+    border: none;
+}
+
+main .ultimos-movimientos a{
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: #2F86B8;
+
+}
+.right{
+    margin-top: 1.4rem ;
+    padding-left: 1.4rem ;
+    border-radius: 5px;
+    border-left: 1px solid #e0e4e6;
+
+}
+.right .recent-updates{
+    margin-top: 1rem;
+
+ 
+}
+
+.right .recent-updates h2{
+    margin-bottom: 0.8rem;
+}
+
+.right .recent-updates .updates{
+    background-color: #ffffff;
+    padding: 1.8rem;
+    border-radius:2rem ;
+box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;    transition: all 100ms ease;
+
+}
+.right .recent-updates .updates:hover{
+    box-shadow: none;
+}
+
+.right .recent-updates .updates .update{
+    display: grid;
+    grid-template-columns: 2.rem auto;
+    gap:  1rem;
+    margin-bottom: 1rem;
+}
+
+.right .rendimiento-1 h2{
+    margin-bottom: 0.8rem;
+}
+
+.right .rendimiento-1 .item{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem 2rem ;
+box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;    border-radius: 1.2rem ;
+    transition: all 200ms ease;
+}
+
+.right .rendimiento-1 .item:hover{
+    box-shadow: none;
+}
+
+.right .rendimiento-1 .item .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 0;
+    width: 100%;
+
+}
+
+.right .rendimiento-1 .item .icon{
+    padding: 0.6rem;
+    color:#ffffff;
+    border-radius:50% ;
+    background-color: #2F86B8;
+    display: flex;
+}
+
