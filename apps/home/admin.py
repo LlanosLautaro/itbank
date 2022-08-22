@@ -1,21 +1,3 @@
 from django.contrib import admin
-from models import AuthGroup, AuthGroupPermissions, AuthPermission, AuthUser, AuthUserGroups, AuthUserPermissions, Cliente, Cuenta, Direccion, DjangoAdminLog, DjangoContentType, DjangoSession, Empleado, MarcaTarjeta, Prestamo, Sucursal, Tarjeta, TipoCliente 
 
-admin.site.register(AuthGroup)
-admin.site.register(AuthGroupPermissions)
-admin.site.register(AuthPermission)
-admin.site.register(AuthUser)
-admin.site.register(AuthUserGroups)
-admin.site.register(AuthUserPermissions)
-admin.site.register(Cliente)
-admin.site.register(Cuenta)
-admin.site.register(Direccion)
-admin.site.register(DjangoAdminLog)
-admin.site.register(DjangoContentType)
-admin.site.register(DjangoSession)
-admin.site.register(Empleado)
-admin.site.register(MarcaTarjeta)
-admin.site.register(Prestamo)
-admin.site.register(Sucursal)
-admin.site.register(Tarjeta)
-admin.site.register(TipoCliente)
+# Register your models here.
