@@ -19,7 +19,7 @@ body {
   display: flex;
   height: 70px;
   align-items: center;
-
+  margin-bottom: 20px;
 
 }
 .nav-items > a {
@@ -75,7 +75,7 @@ button {
   height: 90vh;
 }
 .btns{
-  padding-right:10px;
+display: flex;
 
 }
 
