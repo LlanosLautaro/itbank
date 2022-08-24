@@ -6,9 +6,12 @@ class MarcaTarjeta(models.Model):
     brand_id = models.AutoField(primary_key=True)
     brand_name = models.CharField(max_length=55)
 
+    
     class Meta:
         managed = False
         db_table = 'marca_tarjeta'
+    def __str__(self):
+        return self.brand_name
 
 class Tarjeta(models.Model):
     card_id = models.AutoField(primary_key=True)
@@ -19,12 +22,12 @@ class Tarjeta(models.Model):
     type_card = models.CharField(max_length=55)
     customer_id = models.IntegerField()
     brand = models.ForeignKey(MarcaTarjeta, models.DO_NOTHING)
-    def __str__(self):
-        return self.customer_id + '-' + self.card_id+ '-' + self.type_card
+
     class Meta:
         managed = False
         db_table = 'tarjeta'
-
+        def __str__(self):
+            return str(self.customer_id) + '||' + str(self.card_id)+ '-' + str(self.type_card)
 class TipoCliente(models.Model):
     customer_type_id = models.AutoField(primary_key=True)
     type_name = models.TextField(unique=True)
