@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from apps.API.views import AuthUserList
 
 urlpatterns = [
 path('admin/', admin.site.urls),
@@ -24,4 +25,5 @@ path('tarjeta/', include ('apps.tarjeta.urls'), name='tarjeta'),
 path('prestamo/', include ('apps.prestamo.urls'), name='prestamo'),
 path('registro/', include ('apps.registro.urls'), name='registro'),
 path('', include ('apps.home.urls'), name='home'),
+path('API/', include('apps.API.urls'), name = 'API'),
 ]

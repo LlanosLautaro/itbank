@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'apps.registro',
     'apps.home', 
     'crispy_forms',
+    'apps.API',
      ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -132,3 +133,4 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
