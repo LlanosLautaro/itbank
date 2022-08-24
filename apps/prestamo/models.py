@@ -9,7 +9,7 @@ class Prestamo(models.Model):
     customer_id = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
-        return self.loan_id+'-'+self.loan_date+'-'+self.loan_type
+        return 'ID :'+ str(self.loan_id)+'||'+'Fecha: '+str(self.loan_date)+'||'+'Tipo :'+self.loan_type
     class Meta:
         managed = False
         db_table = 'prestamo'
