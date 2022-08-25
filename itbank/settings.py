@@ -43,11 +43,11 @@ INSTALLED_APPS = [
     'apps.registro',
     'apps.home', 
     'apps.ZZZApi',
-    'apps.ApiCuentaSaldo',
-    'apps.ApiDatosCliente',
-    'apps.Prestamo',
     'rest_framework',
     'crispy_forms',
+    'apps.ApiCuentaSaldo',
+    'apps.ApiDatosCliente',
+    'apps.ApiPrestamo',
     ]
 
 MIDDLEWARE = [
