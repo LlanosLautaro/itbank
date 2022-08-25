@@ -26,4 +26,5 @@ urlpatterns = [
  path('registro/', include ('apps.registro.urls'), name='registro'),
  path('', include ('apps.home.urls'), name='home'),
  path('ZZZApi/', include('apps.ZZZApi.urls'), name = 'ZZZApi'),
-]
+ path('Cliente/', include('apps.ApiDatosCliente.urls'), name = 'Cliente'),
+ ]
