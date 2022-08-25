@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,10 +42,14 @@ INSTALLED_APPS = [
     'apps.prestamo',
     'apps.registro',
     'apps.home', 
+    'apps.ZZZApi',
+    'apps.ApiCuentaSaldo',
+    'apps.ApiDatosCliente',
+    'apps.Prestamo',
+    'rest_framework',
     'crispy_forms',
-    'apps.API',
-    'rest_framework'
-     ]
+    ]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
